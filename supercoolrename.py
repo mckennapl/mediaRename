@@ -8,7 +8,7 @@ This is PLeX compliant.
 Usage:
     Just run it from the commandline: Ex. "./supercoolrename.py"
     Also feel free to change the dir_path variable if you'd like to run it from
-    a different location on your machine. The script *will* rename itself.
+    a different location on your machine. You will most likely need to add additional logic to make that work.
 """
 
 import os
@@ -32,15 +32,15 @@ def rename():
         print(medianame + " was renamed to:")
         media_formatted = re.sub('[^A-Za-z0-9]+', '.', medianame)
         os.rename(medianame, media_formatted.rstrip('.').lower())
-        print(media_formatted.rstrip('.').lower()) #the functions are necessary
-        print("") #This is to add readibility to the next filename block
+        print(media_formatted.rstrip('.').lower()) #will
+        print("")
 
 
 def success():
     """Returns a success message when everything is successfully renamed.
 
     Returns:
-        A message of success when renaming is finished.
+        A success message when everything is successfully renamed.
     """
     print("Success. Media directory naming scheme compliant.")
 
