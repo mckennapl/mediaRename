@@ -4,7 +4,7 @@ import os
 import os.path
 import re
 
-media_path = "/path/to/media"
+media_path = os.getcwd()
 media_dirs = os.listdir(media_path)
 
 def rename():
